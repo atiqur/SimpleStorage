@@ -18,8 +18,9 @@ contract SimpleStorage {
     mapping(string => uint256) public nameToFavoriteNumber;
 
     // A method or a function. store is a transaction
-    function store(uint256 _favotireNumber) public {
+    function store(uint256 _favotireNumber) public returns (uint256) {
         favoriteNumber = _favotireNumber;
+        return favoriteNumber;
     }
 
     // view is used for viewing and is not a transaction
